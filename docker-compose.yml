@@ -1,0 +1,32 @@
+services:
+  # Base de datos PostgreSQL
+  postgres:
+    image: postgres:16
+    container_name: portfolio-postgres
+    environment:
+      POSTGRES_DB: portfolio_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - portfolio-network
+
+  # Backend Spring Boot (lo configuraremos después)
+  # backend:
+  #   build: ./backend
+  #   ...
+
+  # Frontend Angular (lo configuraremos después)
+  # frontend:
+  #   build: ./frontend
+  #   ...
+
+volumes:
+  postgres_data:
+
+networks:
+  portfolio-network:
+    driver: bridge
