@@ -1,4 +1,4 @@
-package com.micarrera.dashboardbackend.modelo;
+package com.micarrera.dashboardbackend.entidad;
 
 import java.time.LocalDate;
 

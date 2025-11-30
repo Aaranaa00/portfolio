@@ -1,6 +1,6 @@
 package com.micarrera.dashboardbackend.controlador;
 
-import com.micarrera.dashboardbackend.modelo.Proyecto;
+import com.micarrera.dashboardbackend.entidad.Proyecto;
 import com.micarrera.dashboardbackend.servicio.ServicioProyecto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
