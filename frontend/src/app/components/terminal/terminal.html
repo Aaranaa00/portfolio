@@ -1,31 +1,26 @@
 <section class="contenedor-terminal">
   <header class="cabecera-terminal">
     <h1 class="titulo-terminal">portfolio-manuel</h1>
-    <button class="boton-tema" (click)="cambiarTema()">
+    <button class="boton-tema" type="button" (click)="cambiarTema()" aria-label="Cambiar tema">
       {{ modoClaro ? '☽' : '☀' }}
     </button>
   </header>
   
   <main class="cuerpo-terminal">
-    <!-- Historial de comandos -->
-    <article class="historial-comandos">
-
-      <!-- Mensaje de bienvenida -->
-      <article class="mensaje-bienvenida">
+    <section class="historial-comandos">
+      <section class="mensaje-bienvenida">
         <p *ngFor="let linea of mensajeBienvenida" class="linea-terminal">
           {{ linea }}
         </p>
-      </article>
+      </section>
 
-      <!-- Historial de comandos y respuestas -->
       <p *ngFor="let linea of historial" 
         class="linea-terminal" 
         [ngClass]="linea.clase"
         [innerHTML]="linea.texto">
       </p>
-    </article>
+    </section>
 
-    <!-- Input interactivo -->
     <footer class="prompt-terminal">
       <label for="comando-input" class="simbolo-prompt">guest@portfolio:~$</label>
       <input

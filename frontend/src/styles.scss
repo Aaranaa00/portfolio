@@ -38,14 +38,19 @@
 // Body Global
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 body {
-  background: linear-gradient(135deg, #1a1410 0%, #0d0907 50%, #1f1c18 100%);
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--espaciado-xs);
+  background: linear-gradient(135deg, #1a1410 0%, #0d0907 50%, #1f1c18 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (min-width: 48rem) {
+    padding: var(--espaciado-sm);
+  }
 }
 
 body.modo-claro {
@@ -56,6 +61,7 @@ body.modo-claro {
   --color-borde: #93a1a1;
   
   background: linear-gradient(135deg, #fdf6e3 0%, #eee8d5 50%, #d9d2c1 100%);
+  background-size: 200% 200%;
   animation: ondas 8s ease-in-out infinite;
 }
 
